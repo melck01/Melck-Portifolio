@@ -202,3 +202,98 @@ html {
   background:linear-gradient(90deg,#8b5cf6,#ec4899);
   box-shadow:0 0 15px #8b5cf6;
 }
+
+@media (max-width: 1024px){
+
+  header{
+    padding:20px 30px;
+  }
+
+  nav ul{
+    gap:20px;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .typing{
+    font-size:20px;
+  }
+
+  .section{
+    padding:80px 8%;
+  }
+
+  .cards{
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+}
+
+
+@media (max-width: 768px){
+
+  header{
+    padding:15px 20px;
+  }
+
+  nav{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  nav ul{
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero{
+    padding:0 20px;
+  }
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .typing{
+    font-size:18px;
+  }
+
+  .hero-img{
+    width:140px;
+    height:140px;
+  }
+
+  .btn{
+    padding:10px 25px;
+    font-size:14px;
+  }
+
+  .section{
+    padding:70px 20px;
+  }
+
+  .section h2{
+    font-size:26px;
+  }
+
+  .skill{
+    max-width:100%;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .card img{
+    height:180px;
+  }
+
+  .contato{
+    padding:80px 20px;
+    gap:30px;
+  }
+
+}
