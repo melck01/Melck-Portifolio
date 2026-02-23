@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Melck Messias | Front-end Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header class="header">
+  <nav>
+    <div class="logo">MM</div>
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="./assets/melck.png" class="hero-img" alt="Melck">
+  <h1>Olá, eu sou <span>Melck</span></h1>
+  <h2 class="typing"></h2>
+  <a href="#projetos" class="btn">Ver Projetos</a>
+</section>
+
+<section id="sobre" class="section">
+  <h2>Sobre Mim</h2>
+  <p>
+      Sou desenvolvedor Front-end apaixonado por transformar ideias em interfaces modernas,
+      funcionais e com alto impacto visual. Trabalho com HTML, CSS, JavaScript e React,
+      criando aplicações responsivas, organizadas e focadas na melhor experiência possível para o usuário.
+    </p>
+
+    <p>
+      Meu foco não é apenas fazer “layout bonito”, mas construir soluções estratégicas
+      que performam bem, carregam rápido e entregam valor real.
+    </p>
+
+    <p>
+      Atualmente estou expandindo meus conhecimentos para o back-end,
+      Node.js, com o objetivo de me tornar um desenvolvedor Full Stack completo.
+    </p>
+</section>
+
+<section id="skills" class="section">
+  <h2>Minhas Skills</h2>
+
+  <div class="skill">
+    <p>HTML</p>
+    <div class="bar"><div style="width:90%"></div></div>
+  </div>
+
+  <div class="skill">
+    <p>CSS</p>
+    <div class="bar"><div style="width:90%"></div></div>
+  </div>
+
+  <div class="skill ultra">
+    <p>JavaScript ⚡</p>
+    <div class="bar"><div style="width:100%"></div></div>
+  </div>
+
+  <div class="skill ultra">
+    <p>React ⚛</p>
+    <div class="bar"><div style="width:100%"></div></div>
+  </div>
+</section>
+
+<section id="projetos" class="section">
+  <h2>Projetos em Destaque</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <img src="./assets/coffe-shop.png">
+      <div class="card-content">
+        <h3>Cafeteria</h3>
+        <p>Landing page focada em conversão e design moderno.</p>
+        <a href="https://melck01.github.io/coffee_proj/" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./assets/spotify.png">
+      <div class="card-content">
+        <h3>Spotify Clone</h3>
+        <p>Reprodução fiel da interface com foco em layout.</p>
+        <a href="https://melck01.github.io/spotify/" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./assets/conversor.png">
+      <div class="card-content">
+        <h3>Conversor Monetário</h3>
+        <p>App que consome API pública em tempo real.</p>
+        <a href="https://melck01.github.io/Conversor-monetario/" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contato" class="section contato">
+  <h2>Vamos Trabalhar Juntos?</h2>
+  <a href="https://wa.me/5511949796613" class="btn">Falar no WhatsApp</a>
+</section>
+
+<script>
+const texts = [
+  "Desenvolvedor Front-end",
+  "Criador de Interfaces Modernas",
+  "Focado em Performance e Conversão"
+];
+
+let count = 0;
+let index = 0;
+let currentText = '';
+let letter = '';
+
+(function type(){
+  if(count === texts.length){
+    count = 0;
+  }
+
+  currentText = texts[count];
+  letter = currentText.slice(0, ++index);
+
+  document.querySelector('.typing').textContent = letter;
+
+  if(letter.length === currentText.length){
+    count++;
+    index = 0;
+  }
+
+  setTimeout(type, 100);
+})();
+</script>
+
+</body>
+</html>
