@@ -100,6 +100,9 @@ nav a:hover{
   text-align:center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 .skill{
   margin:20px auto;
